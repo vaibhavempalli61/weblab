@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vaibhav Empalli - Resume</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            color: #222;
+        }
+
+        h1 {
+            margin-bottom: 5px;
+        }
+
+        h2 {
+            border-bottom: 1px solid #222;
+            padding-bottom: 4px;
+            margin-top: 25px;
+        }
+
+        h3 {
+            margin-bottom: 3px;
+        }
+
+        p, li {
+            line-height: 1.5;
+        }
+
+        a {
+            color: #222;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Vaibhav Empalli</h1>
+
+    <p>
+        Machine Learning Engineer |Data Analysis<br>
+        Bengaluru, India |
+        YOUR_EMAIL |
+        YOUR_PHONE |
+        <a href="https://github.com/vaibhavempalli61">GitHub</a> |
+        <a href="#">LinkedIn</a>
+    </p>
+
+    <h2>Profile</h2>
+
+    <p>
+        Machine Learning and Data Analytics interested in building
+        practical AI applications and scalable software solutions.
+        Experienced with Python, Tableu ,PowerBI and databases.
+    </p>
+
+
+    <h2>Education</h2>
+
+    <p>
+        <strong>B.E. in Computer Science / Engineering</strong><br>
+        BMS Institute of Technology and Management, Bengaluru
+    </p>
+
+
+    <h2>Projects</h2>
+
+    <h3>Python Revenue Converter</h3>
+    <p>
+        <strong>Tech:</strong> Python, FastAPI, Scikit-learn, Streamlit, Docker,Pandas, Numpy
+    </p>
+    <ul>
+        <li>Built a  system for converter many excel input files into an output file where the data is arranged Based on the cleints Requirement.</li>
+        
+    </ul>
+
+
+    <h3>DataForge</h3>
+    <p>
+        <strong>Tech:</strong> Python, Pandas, NumPy, Scikit-learn
+    </p>
+    <ul>
+        <li>Built an automated data cleaning and preprocessing platform.</li>
+        <li>Implemented duplicate and outlier detection.</li>
+    </ul>
+
+
+    
+    <p>
+        <strong>Languages:</strong> Python, SQL<br>
+        <strong>ML:</strong> Scikit-learn,Pandas, NumPy<br>
+        <strong>Backend:</strong> Django, REST API, Streamlit<br>
+        <strong>Database:</strong> PostgreSQL<br>
+        <strong>Tools:</strong>  GitHub, Jupyter
+    </p>
+
+
+    <h2>Links</h2>
+
+    <p>
+        GitHub:
+        <a href="https://github.com/vaibhavempalli61">
+            github.com/vaibhavempalli61@gmail.com
+        </a>
+    </p>
+
+    
+
+</body>
+</html>
