@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Calculator</title>
+  <style>
+    body
+    {
+      font-family: Arial;
+      background-color:darkolivegreen;
+    }
+
+    #calculatorBox
+    {
+      width: 275px;
+      margin: 60px auto;
+      padding: 50px;
+      background-color: sandybrown;
+      border: 2px solid red;
+      border-radius: 9px;
+      text-align: center;
+    }
+
+    input, select, button
+    {
+      width: 100%;
+      padding: 9px;
+      margin: 7px 0;
+    }
+  </style>
+</head>
+<body>
+  <div id="calculatorBox">
+    <h2>Calculator</h2>
+
+    <input type="number" id="firstNumber" placeholder="Enter First number">
+
+    <select id="operator">
+      <option value="+">+ (Add)</option>
+      <option value="-">- (Subtract)</option>
+      <option value="*">* (Multiply)</option>
+      <option value="/">/ (Divide)</option>
+    </select>
+
+    <input type="number" id="secondNumber" placeholder="Enter Second number">
+   <h3 id="resultText"></h3>
+   <button onclick="calculate()">Calculate</button>
+  </div>
+
+  <script>
+    function calculate()
+    {
+      // Read the values entered by the user
+      var firstNumber = parseFloat(document.getElementById("firstNumber").value);
+      var secondNumber = parseFloat(document.getElementById("secondNumber").value);
+      var operator = document.getElementById("operator").value;
+      var result;
+
+      // Check that both inputs are valid numbers
+      if (isNaN(firstNumber) || isNaN(secondNumber))
+      {
+        document.getElementById("resultText").innerText = "Please enter both numbers";
+        return;
+      }
+
+      // Perform the selected operation
+      if (operator == "+")
+      {
+        result = firstNumber + secondNumber;
+      }
+      else if (operator == "-")
+      {
+        result = firstNumber - secondNumber;
+      }
+      else if (operator == "*")
+      {
+        result = firstNumber * secondNumber;
+      }
+      else if (operator == "/")
+      {
+        if (secondNumber == 0)
+        {
+          document.getElementById("resultText").innerText = "Cannot divide by zero";
+          return;
+        }
+        result = firstNumber / secondNumber;
+      }
+
+      // Show the result
+      document.getElementById("resultText").innerText = "Result = " + result;
+    }
+  </script>
+</body>
+</html>
