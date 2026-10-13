@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Page</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: lightgray;
+            text-align: center;
+        }
+
+        form {
+            background-color: white;
+            width: 300px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid gray;
+        }
+
+        input {
+            width: 90%;
+            padding: 8px;
+            margin: 8px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: lightblue;
+            border: 1px solid gray;
+            cursor: pointer;
+        }
+
+        #message {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form onsubmit="return validateForm()">
+        <h2>Registration Form</h2>
+
+        <input type="text" id="username"
+               placeholder="Enter Username">
+        <br>
+
+        <input type="password" id="password"
+               placeholder="Enter Password">
+        <br>
+
+        <input type="text" id="email"
+               placeholder="Enter Email ID">
+        <br>
+
+        <input type="text" id="mobile"
+               placeholder="Enter Mobile Number">
+        <br><br>
+
+        <button type="submit">Register</button>
+
+        <p id="message"></p>
+    </form>
+
+    <script>
+        function validateForm() {
+            let username = document.getElementById("username").value.trim();
+            let password = document.getElementById("password").value;
+            let email = document.getElementById("email").value.trim();
+            let mobile = document.getElementById("mobile").value.trim();
+            let message = document.getElementById("message");
+
+            if (username == "") {
+                message.innerHTML = "Please enter username";
+                return false;
+            }
+
+            if (password.length < 8) {
+                message.innerHTML = "Password must be at least 8 characters";
+                return false;
+            }
+
+            let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (!emailPattern.test(email)) {
+                message.innerHTML = "Enter a valid email ID";
+                return false;
+            }
+
+            let mobilePattern = /^[0-9]{10}$/;
+
+            if (!mobilePattern.test(mobile)) {
+                message.innerHTML = "Enter a valid 10-digit mobile number";
+                return false;
+            }
+
+            message.style.color = "green";
+            message.innerHTML = "Registration successful!";
+            return false;
+        }
+    </script>
+
+</body>
+</html>
