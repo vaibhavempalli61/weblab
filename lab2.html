@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Text Animation</title>
+</head>
+<body>
+  <h1 id="animatedText"></h1>
+
+  <script>
+    var textElement = document.getElementById("animatedText");
+    var fontSize = 5;
+    var isGrowing = true;
+
+    // Start with the growing text in red
+    textElement.innerText = "TEXT-GROWING";
+    textElement.style.color = "red";
+
+    // Call changeSize() every 100 milliseconds
+    var timerId = setInterval(changeSize, 100);
+
+    function changeSize()
+    {
+      if (isGrowing == true)
+      {
+        // Increase the font size
+        fontSize = fontSize + 1;
+
+        // At 50pt, switch to the shrinking text in blue
+        if (fontSize >= 50)
+        {
+          isGrowing = false;
+          textElement.innerText = "TEXTSHRINKING";
+          textElement.style.color = "blue";
+        }
+      }
+      else
+      {
+        // Decrease the font size
+        fontSize = fontSize - 1;
+
+        // Stop when the font size comes back to 5pt
+        if (fontSize <= 5)
+        {
+          clearInterval(timerId);
+        }
+      }
+
+      textElement.style.fontSize = fontSize + "pt";
+    }
+  </script>
+</body>
+</html>
